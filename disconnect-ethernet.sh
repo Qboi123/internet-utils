@@ -1,0 +1,1 @@
+ifconfig $(ifconfig | grep eth | awk '{print $1}' | head -1 )  down

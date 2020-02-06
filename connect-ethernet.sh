@@ -1,0 +1,2 @@
+ifconfig $(ip link show | grep eth | grep state | awk '{printf $2}'| sed -e 's/:$//') up
+ifconfig $(ifconfig | grep eth | awk '{print $1}'| head -1 ) $(ifconfig  | grep Bcast | awk '{printf $2}' | cut  -c6-) up
